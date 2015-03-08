@@ -3,7 +3,7 @@ module.exports = (BasePlugin) ->
 	# Define Plugin
 	class MarkedPlugin extends BasePlugin
 		# Plugin name
-		name: 'marked'
+		name: 'kramed'
 
 		# Plugin configuration
 		config:
@@ -22,7 +22,7 @@ module.exports = (BasePlugin) ->
 			# Check our extensions
 			if inExtension in ['md','markdown'] and outExtension in [null,'html']
 				# Requires
-				marked = require('marked')
+				marked = require('kramed')
 				marked.setOptions(config.markedOptions)
 				if config.markedRenderer
 					renderer = new marked.Renderer();
